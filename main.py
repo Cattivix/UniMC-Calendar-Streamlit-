@@ -254,7 +254,7 @@ def main():
     ## get links from text file, edit them to get the timetable URL
     if uploaded_file is not None:
         # Read the contents of the file
-        with open("links.txt" , "r") as openfileobj:
+        with open(uploaded_file , "r") as openfileobj:
 
             for line in openfileobj:
                 line.strip()
