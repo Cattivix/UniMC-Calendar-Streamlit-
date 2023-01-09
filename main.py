@@ -54,11 +54,13 @@ def generate_pdf(df):
 
         # If the current day is different from the previous day, add a blank row
         if day != prev_day and prev_day != None:
-            pdf.cell(10, 10, "", 1)
-            pdf.cell(30, 10, "", 1)
-            pdf.cell(60, 10, "", 1)
-            pdf.cell(0, 10, "", 1, 0, "C")
+            pdf.set_fill_color(255, 255, 255)
+            pdf.cell(10, 10, "", 1, 0, "", 1)
+            pdf.cell(30, 10, "", 1, 0, "", 1)
+            pdf.cell(60, 10, "", 1, 0, "", 1)
+            pdf.cell(0, 10, "", 1, 0, "C", 1)
             pdf.ln()
+            pdf.set_fill_color(255, 255, 255)
 
         if prev_day is not None:
                 # Get the day of the week for the current day
