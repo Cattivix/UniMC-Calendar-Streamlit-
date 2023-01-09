@@ -3,3 +3,4 @@ requests
 fpdf
 beautifulsoup4
 soupsieve
+Pillow
