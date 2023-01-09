@@ -30,9 +30,10 @@ def generate_pdf(df):
     pdf.cell(0, 10, "Aula", 1, 0, "C")
     pdf.ln()
 
-    # Initialize the previous day variable
+    # Initialize the variables to check if lections 
     prev_day = None
     prev_month = None
+
     # Add the table data
     for i, row in df.iterrows():
         # Get the day, month, start time, and end time from the row
