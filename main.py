@@ -252,7 +252,7 @@ def main():
 
     
     st.image(image0, caption='Esempio di file di testo')
-    st.markdown(f"Puoi utilizzare <a href='{editpad_url}'>{editpad_text}</a> per creare un file di testo direttamente da telefono. Clicca sul link, clicca su 'Create New Text Note', incolla i link andando a capo ogni volta ed infine clicca su 'Scarica e salva' in basso a sinistra. ", unsafe_allow_html=True)
+    st.markdown(f"Puoi utilizzare <a href='{editpad_url}'>{editpad_text}</a> per creare un file di testo direttamente da telefono. Clicca sul link, clicca su 'Create New Text Note', incolla i link andando a capo ogni volta ed infine clicca su 'Scarica e salva' in basso a sinistra. Ovviamente, a meno che tu non decida di cambiare qualche corso, basta creare il file di testo una sola volta e caricare sempre lo stesso ogni volta. ", unsafe_allow_html=True)
 
     st.write("Non c'è un limite al numero di corsi che puoi aggiungere.")
     st.write("Fai attenzione a selezionare l'anno corretto del corso.")
