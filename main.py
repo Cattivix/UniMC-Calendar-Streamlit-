@@ -244,7 +244,7 @@ def main():
     st.markdown(f"<h1 style='text-align: center'>{title}</h1>", unsafe_allow_html=True)
 
     st.header("Cos'è?")
-    st.write("Questa web app nasce dalla frustrazione di dover continuamente controllare ogni singola pagina dei corsi dell'Università di Macerata per vedere date, orari, aulee ed eventuali spostamenti. Caricando un semplice file di testo contenente tutti i corsi che segui in questo semestre, la web app crea un calendario personalizzato contenente i tuoi corsi e ti permette di scaricarlo in formato PDF.")
+    st.write("Questa web app nasce dalla frustrazione di dover continuamente controllare ogni singola pagina dei corsi dell'Università di Macerata per vedere date, orari, aulee ed eventuali spostamenti. Caricando un semplice file di testo contenente tutti i corsi che segui in questo semestre, la web app crea un calendario personalizzato con i tuoi corsi e ti permette di scaricarlo in formato PDF.")
     st.image(image1, caption='Esempio di PDF che potrai scaricare')
 
     st.header("Istruzioni")
