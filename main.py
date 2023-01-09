@@ -9,7 +9,7 @@ import os
 import pandas as pd
 from fpdf import FPDF
 import tempfile
-
+from PIL import Image
 
 def generate_pdf(df):
 
@@ -232,6 +232,10 @@ def main():
 
     st.header("Istruzioni")
     st.write("Crea un file di testo (.txt) sul telefono/computer e copiaci i link ai corsi che intendi seguire, ad esempio https://docenti.unimc.it/paola.nicolini/courses/2022/26513 ")
+
+    image = Image.open('sample.jpg')
+    st.image(image, caption='Esempio di file di testo')
+
     st.write("Separa ogni corso andando a capo. Non c'e' un limite al numero di corsi che il calendario calcola, ma più corsi aggiungi, più lento sarà il programma a creare il tuo calendario. Purtroppo la lentezza è causata dall'hosting gratuito del sito. In futuro potrei spostare l'app su un server migliore.")
     st.write("Fai attenzione a selezionare l'anno corretto del corso.")
     st.write("Fai attenzione a selezionare solo corsi appartenenti al semestre corrente.")
