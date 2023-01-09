@@ -1,0 +1,5 @@
+streamlit
+requests
+fpdf
+beautifulsoup4
+soupsieve
