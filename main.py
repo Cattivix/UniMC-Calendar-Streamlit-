@@ -268,7 +268,7 @@ def main():
     st.write("")
 
     st.header("Contatti")
-    st.markdown(f"Per segnalare eventuali bug o altro, contattami mandando una <a href='{email_url}'>{email_text}</a> oppure scrivendomi su <a href='{ig_url}'>{ig_text}</a>.", unsafe_allow_html=True)
+    st.markdown(f"Per segnalare eventuali bug o altro, contattami mandandomi una <a href='{email_url}'>{email_text}</a> oppure scrivendomi su <a href='{ig_url}'>{ig_text}</a>.", unsafe_allow_html=True)
 
     uploaded_file = st.file_uploader("Scegli un file di testo", type="txt")
 
