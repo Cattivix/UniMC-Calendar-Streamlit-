@@ -232,13 +232,13 @@ def main():
 
     st.header("Istruzioni")
     st.write("Crea un file di testo (.txt) sul telefono/computer e copiaci i link ai corsi che intendi seguire, ad esempio https://docenti.unimc.it/paola.nicolini/courses/2022/26513 ")
-    st.write("Separa ogni corso andando a capo. Non c'e' un limite al numero di corsi che il calendario calcola, ma più corsi aggiungi, più lento sarà il programma a creare il tuo calendario.")
+    st.write("Separa ogni corso andando a capo. Non c'e' un limite al numero di corsi che il calendario calcola, ma più corsi aggiungi, più lento sarà il programma a creare il tuo calendario. Purtroppo la lentezza è causata dall'hosting gratuito del sito. In futuro potrei spostare l'app su un server migliore.")
     st.write("Fai attenzione a selezionare l'anno corretto del corso.")
     st.write("Fai attenzione a selezionare solo corsi appartenenti al semestre corrente.")
     st.write("")
 
     st.header("Avvertenze")
-    st.write("Il calendario, sia web che PDF, viene creato aggiungendo solo le lezioni che non sono ancora avvenute.")
+    st.write("Il calendario, sia web che PDF, viene creato aggiungendo solo le lezioni che non sono ancora avvenute. Non saranno quindi stampate le lezioni precedenti alla data in cui generi il PDF.")
     st.write("Nel PDF, una linea bianca separa i giorni, mentre una linea nera separa le settimane.")
     st.write("Consiglio di aggiornare periodicamente il calendario per rimanere al passo con eventuali lezioni cancellate e/o spostate.")
     st.write("")
