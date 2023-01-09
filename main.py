@@ -236,19 +236,24 @@ def main():
     email_url = "mailto:e.giampieri3@studenti.unimc.it"
     editpad_url = "https://www.editpad.org/it"
     editpad_text = "Editpad"
-
+    image0 = Image.open('sample.jpg')
+    image1 = Image.open('sample1.jpg')
     title = "Calendario Modulare UniMC"
 
     st.markdown(f"<h1 style='text-align: center'>{title}</h1>", unsafe_allow_html=True)
 
+    st.header("Cos'è?")
+    st.write("Questa web app nasce dalla frustrazione di dover continuamente controllare ogni singola pagina dei corsi dell'Università di Macerata per vedere date, orari, aulee ed eventuali spostamenti. Caricando un semplice file di testo contenente tutti i corsi che segui in questo semestre, la web app mostra un calendario personalizzato contenente i tuoi corsi e permette di scaricarlo in formato PDF.")
+    st.image(image1, caption='Esempio di PDF che potrai scaricare')
+
     st.header("Istruzioni")
     st.write("Crea un file di testo (.txt) sul telefono/computer e copiaci i link ai corsi che intendi seguire, ad esempio:")
 
-    image = Image.open('sample.jpg')
-    st.image(image, caption='Esempio di file di testo')
+    
+    st.image(image0, caption='Esempio di file di testo')
     st.markdown(f"Puoi utilizzare <a href='{editpad_url}'>{editpad_text}</a> per creare un file di testo direttamente da telefono. Clicca sul link, clicca su 'Create New Text Note', incolla i link andando a capo ogni volta ed infine clicca su 'Scarica e salva' in basso a sinistra. ", unsafe_allow_html=True)
 
-    st.write("Separa ogni corso andando a capo. Non c'e' un limite al numero di corsi che il calendario può, ma più corsi aggiungi, più lento sarà il programma a creare il tuo calendario. Purtroppo la lentezza è causata dall'hosting gratuito del sito. In futuro potrei spostare l'app su un server migliore.")
+    st.write("Separa ogni corso andando a capo. Non c'è un limite al numero di corsi che il calendario può, ma più corsi aggiungi, più lento sarà il programma a creare il tuo calendario. Purtroppo la lentezza è causata dall'hosting gratuito del sito. In futuro potrei spostare l'app su un server migliore.")
     st.write("Fai attenzione a selezionare l'anno corretto del corso.")
     st.write("Fai attenzione a selezionare solo corsi appartenenti al semestre corrente.")
     st.write("")
