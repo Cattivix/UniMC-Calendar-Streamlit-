@@ -162,7 +162,7 @@ def create_calendar(links):
                 timetable = soup.find(id = "timetable")
                 if timetable is None:
                     placeholder0.empty()
-                    placeholder1.text("Continuo a non trovare orari per questo corso. Ricontrolla il link e riprova. Potrebbero esserci problemi di connessione al sito di uniMC oppure potresti aver messo dei link sbagliati, o non separandoli da un a capo")
+                    placeholder0.text("Continuo a non trovare orari per questo corso. Ricontrolla il link e riprova. Potrebbero esserci problemi di connessione al sito di uniMC oppure potresti aver messo dei link sbagliati, o non separandoli da un a capo")
                     exit()
 
 
