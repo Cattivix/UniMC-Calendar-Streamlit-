@@ -24,6 +24,7 @@ def generate_pdf(df):
     pdf.set_font('Arial', '', 12)
 
     pdf.cell(0, 12, "Le righe vuote separano i giorni, mentre le righe nere separano le settimane.", 0)
+    pdf.cell(0, 10, "", 0)
 
 
     pdf.set_font('Arial', '', 10)
