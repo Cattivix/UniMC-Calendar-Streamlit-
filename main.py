@@ -258,13 +258,13 @@ def main():
     st.write("Fai attenzione a selezionare l'anno corretto del corso.")
     st.write("Fai attenzione a selezionare solo corsi appartenenti al semestre corrente.")
     st.write("Fai attenzione a separare ogni corso andando a capo.")
-    st.write("La velocità del programma dipende dall'hosting di questo sito. Più avanti potrei spostare la web app su un sito migliore.")
     st.write("")
 
     st.header("Avvertenze")
     st.write("Il calendario, sia web che PDF, viene creato aggiungendo solo le lezioni che non sono ancora avvenute. Non saranno quindi stampate le lezioni precedenti alla data in cui generi il PDF.")
     st.write("Nel PDF, una linea bianca separa i giorni, mentre una linea nera separa le settimane.")
     st.write("Consiglio di aggiornare periodicamente il calendario per rimanere al passo con eventuali lezioni cancellate e/o spostate.")
+    st.write("La velocità del programma dipende dall'hosting di questo sito. Più avanti potrei spostare la web app su un sito migliore.")
     st.write("")
 
     st.header("Contatti")
