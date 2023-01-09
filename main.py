@@ -21,12 +21,6 @@ def generate_pdf(df):
     pdf.add_page()
 
     # Set the font and size
-    pdf.set_font('Arial', '', 12)
-
-    pdf.cell(0, 12, "Le righe vuote separano i giorni, mentre le righe nere separano le settimane.", 0)
-    pdf.cell(0, 10, "", 0)
-
-
     pdf.set_font('Arial', '', 10)
     # Add the table header
     pdf.cell(10, 10, "Data", 1)
@@ -89,8 +83,10 @@ def generate_pdf(df):
         data = f"{day}/{month}"
         orario = f"{start}-{end}"
         # Add the day, month, start time, and end time to the PDF
+        pdf.set_font('Arial', 'B', 10)
         pdf.cell(10, 10, data, 1)
         pdf.cell(30, 10, orario, 1)
+        pdf.set_font('Arial', '', 10)
         pdf.cell(60, 10, corso, 1)
         pdf.cell(0, 10, aula, 1, 0, "C")
 
