@@ -23,10 +23,10 @@ def generate_pdf(df):
     # Set the font and size
     pdf.set_font('Arial', '', 12)
 
-    pdf.cell(0, 12, "Le righe vuote separano i giorni, mentre le righe nere separano le settimane", 0)
+    pdf.cell(0, 12, "Le righe vuote separano i giorni, mentre le righe nere separano le settimane.", 0)
 
 
-    pdf.set_font('Arial', '', 12)
+    pdf.set_font('Arial', '', 10)
     # Add the table header
     pdf.cell(10, 10, "Data", 1)
     pdf.cell(30, 10, "Orario", 1)
