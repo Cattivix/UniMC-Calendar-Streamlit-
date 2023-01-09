@@ -21,12 +21,13 @@ def generate_pdf(df):
     pdf.add_page()
 
     # Set the font and size
-    pdf.set_font('Arial', '', 10)
+    pdf.set_font('Arial', 'B', 10)
     # Add the table header
     pdf.cell(10, 10, "Data", 1)
     pdf.cell(30, 10, "Orario", 1)
     pdf.cell(60, 10, "Corso", 1)
     pdf.cell(0, 10, "Aula", 1, 0, "C")
+    pdf.set_font('Arial', '', 10)
     pdf.ln()
 
     # Initialize the variables to check if lections 
@@ -85,8 +86,8 @@ def generate_pdf(df):
         # Add the day, month, start time, and end time to the PDF
         pdf.set_font('Arial', 'B', 10)
         pdf.cell(10, 10, data, 1)
-        pdf.cell(30, 10, orario, 1)
         pdf.set_font('Arial', '', 10)
+        pdf.cell(30, 10, orario, 1)
         pdf.cell(60, 10, corso, 1)
         pdf.cell(0, 10, aula, 1, 0, "C")
 
