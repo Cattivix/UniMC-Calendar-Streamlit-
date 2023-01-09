@@ -148,7 +148,7 @@ def create_calendar(links):
             if timetable is None:
                 placeholder0 = st.empty()
                 placeholder1 = st.empty()
-                placeholder0.text(link, "Questo corso non ha orari. Hai selezionato l'anno giusto?")
+                placeholder0.text("Un corso non ha orari. Hai selezionato l'anno giusto?")
                 placeholder1.text("Riprovo...")
                 sleep(1)
                 placeholder0.empty()
@@ -158,7 +158,7 @@ def create_calendar(links):
                 soup = BeautifulSoup(r.content, 'html.parser')
                 timetable = soup.find(id = "timetable")
                 if timetable is None:
-                    placeholder1.text(link, "Continuo a non trovare orari per questo corso. Ricontrolla il link e riprova")
+                    placeholder1.text("Continuo a non trovare orari per questo corso. Ricontrolla il link e riprova")
                     exit()
 
 
