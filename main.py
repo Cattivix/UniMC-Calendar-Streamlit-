@@ -127,7 +127,7 @@ def create_calendar(links):
     Months_dic = {'gen': 1, 'feb' : 2, 'mar' : 3, 'apr' : 4, 'mag' : 5, 'giu' : 6, 'lug' : 7, 'ago' : 8, 'set' : 9, 'ott' : 10, 'nov' : 11, 'dic' : 12}
 
     placeholder0 = st.empty()
-
+    placeholder0.text(f"Inizio a scaricare i corsi...")
     ## iterate through the links and do stuff
     for link in links:
         ##clear the lections list
