@@ -8,6 +8,7 @@ from time import sleep
 import os
 import pandas as pd
 from fpdf import FPDF
+import tempfile
 
 
 def generate_pdf(df):
@@ -253,14 +254,15 @@ def main():
 
     ## get links from text file, edit them to get the timetable URL
     if uploaded_file is not None:
-        # Read the contents of the file
-        with open(uploaded_file.getvalue() , "r") as openfileobj:
-
-            for line in openfileobj:
-                line.strip()
-                lineobj = line.split('/')
-                link = lineobj[0] + '//' + lineobj[2] + '/' + lineobj[3] + '/timetable/' + lineobj[6]
-                links.append(link)
+        with tempfile.NamedTemporaryFile(mode="w+b") as temp_file:
+            temp_file.write(uploaded_file.getvalue())
+            temp_file.seek(0)
+            with open(temp_file.name, "r") as openfileobj:
+                for line in openfileobj:
+                    line.strip()
+                    lineobj = line.split('/')
+                    link = lineobj[0] + '//' + lineobj[2] + '/' + lineobj[3] + '/timetable/' + lineobj[6]
+                    links.append(link)
         
         create_calendar(links)
 
