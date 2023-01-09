@@ -227,14 +227,23 @@ def create_calendar(links):
 
 
 def main():
+    ig_text = "Instagram"
+    ig_url = "https://www.instagram.com/jump_ieri/"
+    email_text = "mail"
+    email_url = "mailto:e.giampieri3@studenti.unimc.it"
+    editpad_url = "https://www.editpad.org/it"
+    editpad_text = "Editpad"
+
     title = "Calendario Modulare UniMC"
+
     st.markdown(f"<h1 style='text-align: center'>{title}</h1>", unsafe_allow_html=True)
 
     st.header("Istruzioni")
-    st.write("Crea un file di testo (.txt) sul telefono/computer e copiaci i link ai corsi che intendi seguire, ad esempio https://docenti.unimc.it/paola.nicolini/courses/2022/26513 ")
+    st.write("Crea un file di testo (.txt) sul telefono/computer e copiaci i link ai corsi che intendi seguire, ad esempio:")
 
     image = Image.open('sample.jpg')
     st.image(image, caption='Esempio di file di testo')
+    st.markdown(f"Puoi utilizzare <a href='{editpad_url}'>{editpad_text}</a> per creare un file di testo direttamente da telefono. Clicca sul link, clicca su 'Create New Text Note', incolla i link andando a capo ogni volta ed infine clicca su 'Scarica e salva' in basso a sinistra. ", unsafe_allow_html=True)
 
     st.write("Separa ogni corso andando a capo. Non c'e' un limite al numero di corsi che il calendario calcola, ma più corsi aggiungi, più lento sarà il programma a creare il tuo calendario. Purtroppo la lentezza è causata dall'hosting gratuito del sito. In futuro potrei spostare l'app su un server migliore.")
     st.write("Fai attenzione a selezionare l'anno corretto del corso.")
@@ -248,10 +257,6 @@ def main():
     st.write("")
 
     st.header("Contatti")
-    ig_text = "Instagram"
-    ig_url = "https://www.instagram.com/jump_ieri/"
-    email_text = "mail"
-    email_url = "mailto:e.giampieri3@studenti.unimc.it"
     st.markdown(f"Per segnalare eventuali bug o altro, contattami mandando una <a href='{email_url}'>{email_text}</a> oppure scrivendomi su <a href='{ig_url}'>{ig_text}</a>.", unsafe_allow_html=True)
 
     uploaded_file = st.file_uploader("Scegli un file di testo", type="txt")
