@@ -256,7 +256,7 @@ def main():
 
     st.write("Non c'è un limite al numero di corsi che puoi aggiungere.")
     st.write("Fai attenzione a selezionare l'anno corretto del corso.")
-    st.write("Fai attenzione a selezionare solo corsi appartenenti al semestre corrente.")
+    st.write("Fai attenzione a selezionare solo corsi appartenenti al semestre corrente e il cui calendario è stato pubblicato.")
     st.write("Fai attenzione a separare ogni corso andando a capo.")
     st.write("Una volta creato il file di testo scorri in fondo alla pagina, clicca su 'browse files', seleziona il file ed attendi qualche secondo.")
     st.write("")
