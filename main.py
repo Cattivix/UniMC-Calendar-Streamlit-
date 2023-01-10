@@ -30,9 +30,10 @@ def generate_pdf(df):
     pdf.set_font('Arial', '', 10)
     pdf.ln()
 
-    # Initialize the variables to check if lections 
+    # Initialize the variables 
     prev_day = None
     prev_month = None
+
 
     # Add the table data
     for i, row in df.iterrows():
@@ -41,6 +42,25 @@ def generate_pdf(df):
         month = i[1]
         start = row["inizio"]
         end = row["fine"]
+        title = row["corso"]
+        pdf.set_text_color(0, 0, 0)
+
+        partial_overlap = False
+        full_overlap = False
+
+        # Filtered dataframe of lections occurring that day
+        df_filtered = df.loc[(df.index.get_level_values(0) == day) & (df.index.get_level_values(1) == month)]
+
+        
+        # Iterate through the rows of the filtered DataFrame
+        for j, row1 in df_filtered.iterrows():
+            # Check if there is a partial overlap
+            if ((row1["inizio"] <= start < row1["fine"]) or (row1["inizio"] < end <= row1["fine"])) and (row1["corso"] != title):
+                partial_overlap = True
+            # Check if there is a full overlap
+            if (row1["inizio"] <= start and row1["fine"] >= end) and (row1["corso"] != title):
+                full_overlap = True
+                break
 
         # Truncate the text in the "aula" and "corso" columns if necessary
         if len(row["aula"]) > 40:
@@ -87,6 +107,14 @@ def generate_pdf(df):
         pdf.set_font('Arial', 'B', 10)
         pdf.cell(10, 10, data, 1)
         pdf.set_font('Arial', '', 10)
+
+        if partial_overlap is True and full_overlap is False:
+            pdf.set_text_color(255, 102, 0)
+        elif full_overlap is True:
+            pdf.set_text_color(250, 10, 0)
+        else:
+            pdf.set_text_color(0, 0, 0)
+
         pdf.cell(30, 10, orario, 1)
         pdf.cell(60, 10, corso, 1)
         pdf.cell(0, 10, aula, 1, 0, "C")
