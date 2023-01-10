@@ -272,7 +272,7 @@ def main():
     st.markdown(f"<h1 style='text-align: center'>{title}</h1>", unsafe_allow_html=True)
 
     st.header("Cos'è?")
-    st.write("Questa web app nasce dalla frustrazione di dover continuamente controllare ogni singola pagina dei corsi dell'Università di Macerata per vedere date, orari, aulee ed eventuali spostamenti. Caricando un semplice file di testo contenente tutti i corsi che segui in questo semestre, la web app crea un calendario personalizzato con i tuoi corsi e ti permette di scaricarlo in formato PDF.")
+    st.write("Questa web app nasce dalla frustrazione di dover continuamente controllare ogni singola pagina dei corsi dell'Università di Macerata per vedere date, orari, aulee ed eventuali spostamenti. Caricando un semplice file di testo contenente tutti i corsi che segui in questo semestre, la web app crea un calendario personalizzato con i tuoi corsi e ti permette di scaricarlo in formato PDF. Come puoi vedere, vengono evidenziate anche le eventuali sovrapposizioni tra corsi.")
     st.image(image1, caption='Esempio di PDF che potrai scaricare')
 
     st.header("Istruzioni")
@@ -291,7 +291,7 @@ def main():
 
     st.header("Avvertenze")
     st.write("Il calendario, sia web che PDF, viene creato aggiungendo solo le lezioni che non sono ancora avvenute. Non saranno quindi stampate le lezioni precedenti alla data in cui generi il PDF.")
-    st.write("Nel PDF, una linea bianca separa i giorni, mentre una linea nera separa le settimane.")
+    st.write("Nel PDF, una linea bianca separa i giorni, mentre una linea nera separa le settimane. Una lezione rossa si sovrappone totalmente con un'altra mentre una lezione arancione si sovrappone solo parzialmente.")
     st.write("Consiglio di aggiornare periodicamente il calendario per rimanere al passo con eventuali lezioni cancellate e/o spostate.")
     st.write("La velocità del programma dipende dall'hosting di questo sito. Più avanti potrei spostare la web app su un sito migliore.")
     st.write("")
