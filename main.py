@@ -315,7 +315,7 @@ def main():
                     line.strip()
                     lineobj = line.split('/')
                     if len(lineobj) <= 1:
-                        next
+                        continue
                     if len(lineobj) < 6 or lineobj[4] != "courses":
                         st.write("c'è un problema con il link numero:")
                         st.write(links_edited)
