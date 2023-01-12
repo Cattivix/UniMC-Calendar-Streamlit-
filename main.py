@@ -312,12 +312,12 @@ def main():
             temp_file.seek(0)
             with open(temp_file.name, "r") as openfileobj:
                 for line in openfileobj:
+                    line.strip()
+                    lineobj = line.split('/')
                     if len(lineobj) < 6 or lineobj[4] != "courses":
                         st.write("c'è un problema con il link numero:")
                         st.write(links_edited)
                         exit()
-                    line.strip()
-                    lineobj = line.split('/')
                     link = lineobj[0] + '//' + lineobj[2] + '/' + lineobj[3] + '/timetable/' + lineobj[6]
                     links.append(link)
                     links_edited+=1
