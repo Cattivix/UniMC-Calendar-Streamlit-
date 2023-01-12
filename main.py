@@ -196,6 +196,9 @@ def create_calendar(links):
 
 
             lections_raw = timetable.find_all("li")
+            if len(timetable.select('h1 > span')) < 2:
+                st.markdown(f"<a href='{link}'>"Questo corso"</a> non ha orari e di conseguenza non sarà presente nel calendario. Riprova tra qualche giorno.", unsafe_allow_html=True)
+                continue
             title = timetable.select('h1 > span')[1].get_text(strip=True)[13:] ## the splice removes academic year and blank spaces
 
 
