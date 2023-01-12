@@ -197,9 +197,8 @@ def create_calendar(links):
 
             lections_raw = timetable.find_all("li")
             if len(timetable.select('h1 > span')) < 2:
-                original_link = "https://docenti.unimc.it/carlo.sabbatini/timetable/26113"
                 current_year = datetime.datetime.now().year - 1
-                new_link = original_link.replace("timetable", f"courses/{current_year}")
+                link = link.replace("timetable", f"courses/{current_year}")
                 st.markdown(f"<a href='{link}'>{errorlink}</a> non ha orari e di conseguenza non sarà presente nel calendario. Riprova tra qualche giorno.", unsafe_allow_html=True)
                 continue
             title = timetable.select('h1 > span')[1].get_text(strip=True)[13:] ## the splice removes academic year and blank spaces
