@@ -314,6 +314,8 @@ def main():
                 for line in openfileobj:
                     line.strip()
                     lineobj = line.split('/')
+                    if lineobj <= 1:
+                        next
                     if len(lineobj) < 6 or lineobj[4] != "courses":
                         st.write("c'è un problema con il link numero:")
                         st.write(links_edited)
