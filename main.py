@@ -269,6 +269,9 @@ def main():
     image1 = Image.open('sample1.jpg')
     title = "Calendario Modulare UniMC"
 
+    links_edited = 1
+    links = []
+
     st.markdown(f"<h1 style='text-align: center'>{title}</h1>", unsafe_allow_html=True)
 
     st.header("Cos'è?")
@@ -301,7 +304,6 @@ def main():
 
     uploaded_file = st.file_uploader("Scegli un file di testo", type="txt")
 
-    links = []
 
     ## get links from text file, edit them to get the timetable URL
     if uploaded_file is not None:
@@ -310,10 +312,15 @@ def main():
             temp_file.seek(0)
             with open(temp_file.name, "r") as openfileobj:
                 for line in openfileobj:
+                    if len(lineobj) < 6 or lineobj[4] != "courses":
+                        st.write("c'è un problema con il link numero:")
+                        st.write(links_edited)
+                        exit()
                     line.strip()
                     lineobj = line.split('/')
                     link = lineobj[0] + '//' + lineobj[2] + '/' + lineobj[3] + '/timetable/' + lineobj[6]
                     links.append(link)
+                    links_edited+=1
         
         create_calendar(links)
 
