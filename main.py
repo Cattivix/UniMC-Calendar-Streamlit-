@@ -258,7 +258,7 @@ def create_calendar(links):
 
 
     # Display the DataFrame using the st.table function
-    st.table(df)
+    # st.table(df)
 
 
 
