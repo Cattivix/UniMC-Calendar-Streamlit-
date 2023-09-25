@@ -304,6 +304,9 @@ def main():
     st.write("La velocità del programma dipende dall'hosting di questo sito. Più avanti potrei spostare la web app su un sito migliore.")
     st.write("")
 
+    st.header("Consiglio!")
+    st.write("Personalmente creo il file di testo da PC, lo sposto sul telefono con Sharedrop ed ogni giorno, appena mi alzo, ricreo il calendario da telefono in 5 secondi per averlo sempre aggiornato all'ultimo minuto e per eliminare le lezioni dei giorni passati. ")
+
     st.header("Contatti")
     st.markdown(f"Per segnalare eventuali bug o altro, contattami mandandomi una <a href='{email_url}'>{email_text}</a> oppure scrivendomi su <a href='{ig_url}'>{ig_text}</a>.", unsafe_allow_html=True)
 
